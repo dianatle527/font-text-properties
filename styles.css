@@ -1,7 +1,7 @@
 /* 
     ---------------------------------------------------------------
     Add your name to this file below:
-    NAME: 
+    NAME: Diana Le
     ---------------------------------------------------------------
 */
 
@@ -23,6 +23,28 @@
     --dk-gray: #222;
 
     /* Font Stacks */
+	
+	--font-seymour-one: "Seymour One", sans-serif;
+ 	--font-lato-regular: "Lato", sans-serif;
+  	--font-lato-bold: "Lato", sans-serif;
+
+	.seymour-one-regular {
+	font-family: "Seymour One", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	}
+	.lato-regular {
+	font-family: "Lato", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	}
+
+	.lato-bold {
+	font-family: "Lato", sans-serif;
+	font-weight: 700;
+	font-style: normal;
+}
+
     /* add the two font stacks here */
 }
 
@@ -33,6 +55,10 @@ body{
 	/* set the font color to #222 (--dk-gray) */
 	margin: 0;
 	padding: 0;
+	font-family: var(--body-fonts);
+	line-height: 1.5;
+	font-size: 1.1rem;
+	color: var(--dk-gray);
 }
 
 header{
@@ -46,6 +72,9 @@ h1, h2, h3{
 	/* center align the text */
 	/* use a web font here (instructions on page) */
 	/* make the heading text all small caps style */
+	text-align: center;
+	font-family: var(--font-seymour-one);
+	text-transform: small-caps;
 }
 
 h2{
@@ -57,8 +86,10 @@ h2{
 h3{
 	margin: 0;
 	padding: 4px;
+	text-decoration: solid underline var(--mint) 4px;
 	/* add an underline like the one on the h2s to the h3s, but make it solid and mint color */
 }
+
 
 nav{
 	margin: 0 auto;
@@ -72,9 +103,15 @@ nav ul{
 
 nav a{
 	/* make these display as block level elements */
+	display: block;
 	margin: 1rem auto;
 	padding: 1rem;
 	background-color: var(--tiffany);
+	color: var(--dk-gray)
+	text-align: center
+	text-decoration: none;
+	font-size: 1.2rem;
+	font-weight: 600;
 	/* set the font color to #222 (--dk-gray) */
 	/* center align the text */
 	/* remove the underline */
@@ -104,6 +141,9 @@ p{
 	/* add an indent on the first line of 2rem */
 	/* center those paragraphs (not the text) on the page */
 	padding: 0.5rem;
+	max-width: 55ch;
+	margin: 1rem auto;
+	text-indent: 2rem;
 }
 
 a{
@@ -117,10 +157,12 @@ a:hover{
 dl, ol, main ul{
 	/* limit the width of these lists to 55 characters */
 	margin: 1rem auto;
+	max-width: 55ch;
 }
 
 dt{
 	/* make this font display in bold weight */
+	font-weight: bold;
 }
 
 dt::before{
